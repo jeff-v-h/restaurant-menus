@@ -4,7 +4,28 @@
 	<title>Restaurants</title>
 </head>
 <body>
-	<h1></h1>
-	New menu item here
+	<h1>{{restaurant.name}}</h1>
+	<h2>Create new menu item</h2>
+	<form>
+		<p>
+			Name: <input type="text" size='30' name="name">
+		</p>
+		<p>
+			Price: <input type="text" size='30' name="price">
+		</p>
+		<p>
+			Course: 
+			Appetizer<input type="radio" size='30' name="course" value="Appetizer">  
+			Entree<input type="radio" size='30' name="course" value="Entree">  
+			Main<input type="radio" size='30' name="course" value="Main">  
+			Dessert<input type="radio" size='30' name="course" value="Dessert">  
+			Beverage<input type="radio" size='30' name="course" value="Beverage">  
+		</p>
+		<p>
+			Description: <input type="text" size='30' name="description">
+		</p>
+		<input type="submit" name="Create">
+		<a href="{{ url_for('showMenu', restaurant_id = restaurant.id) }}">Cancel</a>
+	</form>
 </body>
 </html>

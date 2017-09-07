@@ -4,7 +4,23 @@
 	<title>Restaurants</title>
 </head>
 <body>
-	<h1></h1>
-	Edit menu item here
+	<h1>{{restaurant.name}}</h1>
+	<h2>Edit Menu Item: {{item.name}}</h2>
+	<form>
+		<p>
+			Name: <input type="text" size='30' name="name" placeholder="{{item.name}}">
+		</p>
+		<p>
+			Price: <input type="text" size='30' name="price" placeholder="{{item.price}}">
+		</p>
+		<p>
+			Course: <input type="text" size='30' name="course" placeholder="{{item.course}}">
+		</p>
+		<p>
+			Description: <input type="text" size='30' name="description" placeholder="{{item.description}}">
+		</p>
+		<input type="submit" name="Edit">
+		<a href="{{ url_for('showMenu', restaurant_id = restaurant.id) }}">Cancel</a>
+	</form>
 </body>
 </html>

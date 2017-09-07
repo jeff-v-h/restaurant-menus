@@ -4,7 +4,10 @@
 	<title>Restaurants</title>
 </head>
 <body>
-	<h1></h1>
-	Delete restaurant here
+	<h1>Delete Restaurant: {{restaurant.name}}?</h1>
+	<form>
+		<input type="submit" name="Delete">
+		<a href="{{ url_for('showRestaurants') }}">Cancel</a>
+	</form>
 </body>
 </html>
