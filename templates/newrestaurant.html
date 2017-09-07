@@ -5,10 +5,10 @@
 </head>
 <body>
 	<h1>Create a new restaurant</h1>
-	<form>
+	<form action="{{url_for('newRestaurant')}}" method = "post">
 		<p>Name:</p>
 		<input type="text" size='30' name="name">
-		<input type="submit" name="Create">
+		<input type="submit" value="Create">
 		<a href="{{ url_for('showRestaurants') }}">Cancel</a>
 	</form>
 </body>
