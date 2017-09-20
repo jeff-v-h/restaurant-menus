@@ -1,0 +1,98 @@
+body {
+	background-color: #BDEAFD;
+	max-width: 1200px;
+	margin-left: auto;
+	margin-right: auto;
+	margin-top: 0px;
+}
+
+body > * {
+	padding-left: 10px;
+	padding-right: 10px;
+}
+
+/** header **/
+#header {
+	background-color: #4461F9;
+	display: flex;
+	text-align: center;
+	justify-content: center;
+}
+
+h1 {
+	font-size: 3em;
+}
+
+h2 {
+	font-size: 2em;
+	margin-top: 0;
+	margin-bottom: 0;
+	text-align: center;
+}
+
+p {
+	
+}
+
+a {
+	text-decoration: none;
+	font-weight: bold;
+}
+
+.center-link {
+	font-size: 1.5em;
+}
+
+
+/** Flash messages **/
+
+
+/** Create new **/
+.top-link {
+	display: flex;
+	justify-content: center;
+	text-align: center;
+}
+
+.top-link p {
+	background-color: #808080;
+	padding: 10px;
+	border-radius: 20px; 
+	border: solid black 2px;
+	color: white;
+}
+
+.top-link a:link, 
+.top-link a:visited, 
+.top-link a:hover,
+.top-link a:active {
+	color: white;
+}
+
+/** List items **/
+#list-container {
+	text-align: center;
+}
+
+.course-container h2 {
+	margin-bottom: 0.5em;
+	display: block;
+}
+
+.item-container {
+	display: flex;
+	justify-content: space-between;
+	width: 100%;
+	margin-left: 0; 
+	font-size: 20px;
+}
+
+.item-info {
+	width: 60%;
+	margin-left: 20%;
+	margin-bottom: 30px;
+}
+
+.item-edit a {
+	margin-right: 10px;
+}

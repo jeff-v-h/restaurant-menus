@@ -1,10 +1,14 @@
 <!DOCTYPE html>
 <html>
 <head>
+	<link rel="stylesheet" type="text/css" href="{{url_for('static', filename='style.css') }}">
 	<title>Restaurants</title>
 </head>
 <body>
-	<h1>Restaurants</h1>
+	<div id="header">
+		<h1>Restaurants</h1>
+	</div>
+	
 
 	{% with messages = get_flashed_messages() %}
 	{% if messages %}
@@ -16,15 +20,23 @@
 	{% endif %}
 	{% endwith %}
 
-	<p><a href="{{ url_for('newRestaurant') }}">Create new restaurant</a></p>
-
-	{% for restaurant in restaurants %}
-	<p>
-		{{restaurant.name}} </br>
-		<a href="{{ url_for('showMenu', restaurant_id=restaurant.id) }}">See menu</a> </br>
-		<a href="{{ url_for('editRestaurant', restaurant_id=restaurant.id) }}">Edit</a> </br>
-		<a href="{{ url_for('deleteRestaurant', restaurant_id=restaurant.id) }}">Delete</a> </br>
-	</p>
-	{% endfor %}
+	<div class="top-link">
+		<p><a href="{{ url_for('newRestaurant') }}">Create new restaurant</a></p>
+	</div>
+	
+	<div id="list-container">
+		{% for restaurant in restaurants %}
+		<h2>{{restaurant.name}}</h2>
+		<div class="item-container">
+			<div class="item-info">
+				<a href="{{ url_for('showMenu', restaurant_id=restaurant.id) }}" class="menu-link">See menu</a>
+			</div>
+			<div class="item-edit">
+				<a href="{{ url_for('editRestaurant', restaurant_id=restaurant.id) }}" class="edit-link">Edit</a>
+				<a href="{{ url_for('deleteRestaurant', restaurant_id=restaurant.id) }}" class="delete-link">Delete</a>
+			</div>
+		</div>
+		{% endfor %}
+	</div>	
 </body>
 </html>
