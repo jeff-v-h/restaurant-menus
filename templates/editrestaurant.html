@@ -1,11 +1,14 @@
 <!DOCTYPE html>
 <html>
 <head>
-	<link rel="stylesheet" type="text/css" href="{{url_for('static', filename='styles.css')}}">
+	<link rel="stylesheet" type="text/css" href="{{url_for('static', filename='style.css') }}">
 	<title>Restaurants</title>
 </head>
 <body>
-	<h1>Edit Restaurant: {{restaurant.name}}</h1>
+	<div id="header">
+		<h1>Edit Restaurant</h1>
+	</div>
+	<h2>Edit Restaurant: {{restaurant.name}}</h2>
 	<form action="{{url_for('editRestaurant', restaurant_id = restaurant.id)}}" method = "post">
 		<p>Name:</p>
 		<input type="text" size='30' name="name" placeholder="{{restaurant.name}}">
